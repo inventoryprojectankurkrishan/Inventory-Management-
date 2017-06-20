@@ -1,0 +1,7 @@
+package dAO;
+
+import dTO.UserDTO;
+
+public boolean RegisterDAO (UserDTO userDTO) {
+	return false;
+}

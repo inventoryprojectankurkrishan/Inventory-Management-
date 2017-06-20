@@ -1,0 +1,55 @@
+package dTO;
+
+import java.util.Date;
+
+public class RegisterDTO {
+	NameDTO nameDTO;
+	String dateOfBirth;
+	String gender;
+	String userid;
+	String password;
+	String phone;
+	String emailid;
+	public NameDTO getNameDTO() {
+		return nameDTO;
+	}
+	public void setNameDTO(NameDTO nameDTO) {
+		this.nameDTO = nameDTO;
+	}
+	public String getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(String dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+}

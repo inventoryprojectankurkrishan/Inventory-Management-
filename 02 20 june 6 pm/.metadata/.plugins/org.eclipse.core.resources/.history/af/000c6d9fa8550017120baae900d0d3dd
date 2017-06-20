@@ -1,0 +1,8 @@
+package dAO;
+
+public class CommonSQL {
+
+	public static final String Register_User_SQL="";
+	
+	
+}

@@ -1,0 +1,15 @@
+package dTO;
+
+import java.util.Date;
+
+public class userDTO 
+{
+	nameDTO 
+	Date dateOfBirth;
+	String gender;
+	String userid;
+	String password;
+	String phone;
+	String emailid;
+	
+}

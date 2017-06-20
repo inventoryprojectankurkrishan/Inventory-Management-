@@ -1,0 +1,19 @@
+package dAO;
+
+import dTO.UserDTO;
+
+public class RegisterDAO {
+	public boolean doRegister(UserDTO userDTO)
+	{
+	boolean getResult=false;
+	
+	
+	
+	
+	
+	
+	
+	return true;
+			
+	}
+}
