@@ -1,0 +1,12 @@
+package dAO;
+
+public class SetLastLoginDAO {
+	
+		public boolean setUserLastLogin(String userid)
+		{
+			boolean getResult=false;
+			
+			return getResult;
+		}
+
+}

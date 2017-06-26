@@ -1,0 +1,34 @@
+package dAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class CheckUserDAO {
+
+		public boolean checkUserLogin()
+		{
+			boolean getResult=false;
+			Connection con = null;
+		
+			PreparedStatement pstmt1 =null;
+		
+			try
+			{	
+				con = CommonDAO.getConnection();
+			
+			}	
+			finally
+			
+			{
+		
+				if(con!=null)
+				{
+					con.close();
+				}
+	
+			}	
+			return getResult;
+	
+	
+		}
+}

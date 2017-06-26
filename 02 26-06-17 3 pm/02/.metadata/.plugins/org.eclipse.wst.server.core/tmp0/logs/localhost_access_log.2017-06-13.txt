@@ -1,0 +1,11 @@
+127.0.0.1 - - [13/Jun/2017:18:30:21 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:30:21 +0530] "GET /Inventory_System/ HTTP/1.1" 404 1028
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:35:18 +0530] "GET /Inventory_System/ HTTP/1.1" 404 1028
+127.0.0.1 - - [13/Jun/2017:18:37:40 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:37:43 +0530] "GET /Inventory_System/ HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:37:55 +0530] "GET /Inventory_System/login.jsp HTTP/1.1" 200 716
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:40:06 +0530] "GET /Inventory_System/ HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:40:10 +0530] "GET /Inventory_System/login.jsp HTTP/1.1" 200 834
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:40:18 +0530] "POST /Inventory_System/login.action HTTP/1.1" 200 297
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:48:36 +0530] "GET /Inventory_System/ HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [13/Jun/2017:18:48:41 +0530] "GET /Inventory_System/login.jsp HTTP/1.1" 200 884

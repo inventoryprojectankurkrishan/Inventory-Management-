@@ -1,0 +1,11 @@
+package dAO;
+
+public class CommonSQL {
+
+	public static final String Register_User_SQL="insert into user_master (salutation, first_name, middle_name, last_name"
+			+ ", date_of_birth , gender, userid, password , phone , email_id)"
+			+ "values (?, ?, ?, ?, ?,?, ?, ?, ?, ?)";
+	public static final String GET_USER_ID = "select * from user_master where userid = ? ";
+	
+	
+}

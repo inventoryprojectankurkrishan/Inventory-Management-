@@ -1,0 +1,26 @@
+package service;
+
+import helper.LoginHelper;
+
+public class LoginService {
+		public boolean doLogin()
+		{
+			boolean result=false;
+			LoginHelper loginHelper = new LoginHelper();
+			boolean result1=loginHelper.checkUser();
+		
+			if(result1)
+			{
+				boolean result2=loginHelper.setLastLogin();
+				if(result2)
+				{	
+					boolean result3=loginHelper.returnUserDTO();
+					if(result3)
+					{
+						result=true;
+					}
+				}
+			}
+			return result;
+		}
+}

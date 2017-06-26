@@ -1,0 +1,31 @@
+package helper;
+
+public class LoginHelper {
+	public boolean checkUser()
+	{
+		boolean result=false;
+		
+		
+		
+		return result;
+	}
+	
+	public boolean setLastLogin()
+	{
+		boolean result=false;
+		
+		
+		return result;
+	}
+	
+	
+	public boolean returnUserDTO()
+	{
+		boolean result=false;
+		
+		return result;
+		
+	}
+	
+	
+}

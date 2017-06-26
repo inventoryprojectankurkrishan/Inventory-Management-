@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="login" class="action.LoginAC">
+			<result name="success">/dashboard.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<action name="register" class="action.RegisterAC">
+			<result name="success">/login.jsp</result>
+			<result name="duplicate">/register.jsp</result>
+			<result name="error">/register.jsp</result>
+		</action>
+		
+		<action name="create_individual_customer_contact" class="action.CreateIndividualCustomerContactAC">
+			<result name="success">/customer_list.jsp</result>
+			<result name="duplicate">/create_individual_contact.jsp</result>
+			<result name="error">/create_individual_contact.jsp</result>
+		</action>
+		
+		<action name="create_company_contact" class="action.CreateCompanyContactAC">
+			<result name="success">/dashboard.jsp</result>
+			<result name="duplicate">/create_company_contact.jsp</result>
+			<result name="error">/register.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

@@ -1,0 +1,56 @@
+package dAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class CheckUserDAO {
+
+		public boolean checkUserLogin() throws SQLException
+		{
+			boolean getResult=false;
+			Connection con = null;
+		
+			PreparedStatement pstmt1 =null;
+			ResultSet rs1 =null;
+			try
+			{	
+				con = CommonDAO.getConnection();
+				
+				pstmt1=con.prepareStatement(CommonSQL.CHECK_USER_ID_PASSWORD);
+				pstmt1.setString(1, userDTO.getUserid());
+				rs1=pstmt1.executeQuery();
+				
+				
+				
+				
+				
+			
+			} 
+			
+			catch (ClassNotFoundException e) 
+			{
+				e.printStackTrace();
+				System.out.println("ClassNotFound Exception in checkUserLogin in CheckUserDAO");
+			}
+			catch (SQLException e)
+			{
+				e.printStackTrace();
+				System.out.println("SQL Exception in checkUserLogin in CheckUserDAO");
+			}	
+			
+			finally
+			{
+		
+				if(con!=null)
+				{
+					con.close();
+				}
+	
+			}	
+			return getResult;
+	
+	
+		}
+}

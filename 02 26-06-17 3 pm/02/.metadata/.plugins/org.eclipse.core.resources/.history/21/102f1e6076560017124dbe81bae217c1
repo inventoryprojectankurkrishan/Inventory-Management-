@@ -1,0 +1,14 @@
+package dAO;
+
+import dTO.CreateindividualConatctDTO;
+
+public class CreateIndividualContactDAO {
+
+	
+
+	public boolean createIndContactDAO(CreateindividualConatctDTO indContactDTO) {
+		
+		return false;
+	}
+
+}

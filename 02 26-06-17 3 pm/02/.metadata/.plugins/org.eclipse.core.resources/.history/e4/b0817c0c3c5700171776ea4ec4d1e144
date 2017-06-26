@@ -1,0 +1,14 @@
+package helper;
+
+import dAO.CreateIndividualContactDAO;
+import dTO.CreateIndividualContactDTO;
+
+public class CreateIndividualConatctHelper {
+
+	public boolean createIndContactHelper(CreateIndividualContactDTO indContactDTO) {
+		boolean result = false;
+		CreateIndividualContactDAO individualDAO = new CreateIndividualContactDAO();
+		result =  individualDAO.createIndContactDAO(indContactDTO);
+		return result ;
+	}
+}

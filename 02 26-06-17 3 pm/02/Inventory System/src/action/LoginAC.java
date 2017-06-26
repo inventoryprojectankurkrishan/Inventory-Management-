@@ -1,0 +1,42 @@
+package action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dTO.LoginDTO;
+import service.LoginService;
+
+public class LoginAC extends ActionSupport{
+	String userid;
+	String password;
+	
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	@Override
+	public String execute()
+	{	
+		String result=ERROR;
+		
+		LoginDTO loginDTO=new LoginDTO();
+		loginDTO.setUserid(userid);
+		loginDTO.setPassword(password);
+	
+		LoginService loginService=new LoginService();
+		
+		if(loginService.doLogin(loginDTO))
+		{
+			result=SUCCESS;
+		}
+		
+		return result;
+	}
+}

@@ -1,0 +1,39 @@
+05-Oct-2016 16:08:06.847 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.37
+05-Oct-2016 16:08:06.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 1 2016 10:01:52 UTC
+05-Oct-2016 16:08:06.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.37.0
+05-Oct-2016 16:08:06.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+05-Oct-2016 16:08:06.851 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+05-Oct-2016 16:08:06.852 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+05-Oct-2016 16:08:06.852 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre1.8.0_101
+05-Oct-2016 16:08:06.852 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_101-b13
+05-Oct-2016 16:08:06.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+05-Oct-2016 16:08:06.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37
+05-Oct-2016 16:08:06.853 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37
+05-Oct-2016 16:08:06.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+05-Oct-2016 16:08:06.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\conf\logging.properties
+05-Oct-2016 16:08:06.855 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Oct-2016 16:08:06.855 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\endorsed
+05-Oct-2016 16:08:06.856 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37
+05-Oct-2016 16:08:06.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37
+05-Oct-2016 16:08:06.860 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\temp
+05-Oct-2016 16:08:06.865 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library 1.2.8 using APR version 1.5.2.
+05-Oct-2016 16:08:06.866 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+05-Oct-2016 16:08:07.727 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized (OpenSSL 1.0.2h  3 May 2016)
+05-Oct-2016 16:08:07.983 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-apr-8080"]
+05-Oct-2016 16:08:08.006 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-apr-8009"]
+05-Oct-2016 16:08:08.009 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 2313 ms
+05-Oct-2016 16:08:08.117 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+05-Oct-2016 16:08:08.117 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.37
+05-Oct-2016 16:08:08.150 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\docs
+05-Oct-2016 16:08:09.017 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\docs has finished in 866 ms
+05-Oct-2016 16:08:09.018 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\examples
+05-Oct-2016 16:08:09.838 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\examples has finished in 820 ms
+05-Oct-2016 16:08:09.839 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\host-manager
+05-Oct-2016 16:08:09.917 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\host-manager has finished in 79 ms
+05-Oct-2016 16:08:09.918 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\manager
+05-Oct-2016 16:08:09.967 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\manager has finished in 49 ms
+05-Oct-2016 16:08:09.968 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\ROOT
+05-Oct-2016 16:08:10.006 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\Krishan\Study\Brain Mentors\Java\Tomcat\apache-tomcat-8.0.37\webapps\ROOT has finished in 38 ms
+05-Oct-2016 16:08:10.011 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-apr-8080"]
+05-Oct-2016 16:08:10.044 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-apr-8009"]
+05-Oct-2016 16:08:10.050 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2039 ms

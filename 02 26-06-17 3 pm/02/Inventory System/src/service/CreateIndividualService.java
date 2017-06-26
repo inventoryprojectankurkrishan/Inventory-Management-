@@ -1,0 +1,15 @@
+package service;
+
+import dTO.CreateIndividualContactDTO;
+import helper.CreateIndividualConatctHelper;
+
+public class CreateIndividualService {
+
+	public boolean doindividualService(CreateIndividualContactDTO indContactDTO) {
+		boolean result = false;
+		CreateIndividualConatctHelper individualHelper = new CreateIndividualConatctHelper();
+		result = (individualHelper. createIndContactHelper(indContactDTO));
+		return result;
+	}
+
+}
