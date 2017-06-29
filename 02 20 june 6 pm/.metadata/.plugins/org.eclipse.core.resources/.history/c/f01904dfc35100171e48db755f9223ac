@@ -1,8 +1,0 @@
-package dAO;
-
-import dTO.UserDTO;
-
-public boolean RegisterDAO (UserDTO userDTO) {
-	boolean getResult=false;
-	return getResult;
-}

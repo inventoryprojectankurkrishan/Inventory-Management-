@@ -1,8 +1,0 @@
-package dTO;
-
-public class NameDTO {
-	String salutation;
-	String firstname;
-	String middlename;
-	String lastname;
-}

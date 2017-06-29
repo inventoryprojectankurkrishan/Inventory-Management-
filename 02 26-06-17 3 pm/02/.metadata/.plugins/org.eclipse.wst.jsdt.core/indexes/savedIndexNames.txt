@@ -1,8 +1,0 @@
-INDEX VERSION 1.3+E:\Krishan\Study\Brain Mentors\Java\Programs\Eclipse\Inventory\krishan\02\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3266534240.index
-964263321.index
-2300321551.index
-229255801.index
-1178836449.index
-3603779058.index
-185261971.index
