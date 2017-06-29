@@ -1,0 +1,32 @@
+package dAO;
+
+public class CommonSQL {
+
+	public static final String Register_User_SQL="insert into user_master (salutation, first_name, middle_name, last_name"
+			+ ", date_of_birth , gender, userid, password , phone , email_id, address)"
+			+ "values (?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?)";
+	public static final String GET_USER_ID = "select * from user_master where userid = ? ";
+	
+	public static final String CHECK_USER_ID_PASSWORD = "select userid , password, status from user_master where userid = ?";
+	public static final String Set_User_Last_Login_SQL = "update user_master set lastlogin = ? where userid = ?";
+	public static final String CREATE_INDIVIDUAL_CONTACT_SQL="insert into contact_individual (contact_type, salutation,"
+			+ " firstname, middlename, lastname, gender, phone, emailid, billing_address, shipping_address) values"
+			+ " (?,?,?,?,?,?,?,?,?,?)";
+	
+	public static final String GET_CONTACT_LIST_SQL="select * from contact_individual";
+	//public static final String GET_USER_DETAILS_SQL="select * from user_master where userid = ? ";
+	public static final String GET_USER_DETAILS_SQL="select salutation, first_name, middle_name,"
+			+ " last_name, date_of_birth, gender, userid, password, phone, email_id, address, "
+			+ " role_master.name as rolename,"
+			+ " role_master.descr as roledescr,"
+			+ " group_master.group_name as groupname,"
+			+ " right_master.name, right_master.descr, right_master.screenname "
+			+ "from user_master, role_master, user_role_mapping urmap, group_master,"
+			+ "role_group_mapping rgmap, right_master, group_right_mapping grmap"
+			+ " where userid=? and"
+			+ " role_master.roleid=urmap.roleid and"
+			+ " user_master.uid = urmap.uid and role_master.roleid=rgmap.roleid and "
+			+ "group_master.groupid=rgmap.groupid and right_master.rightid = grmap.rightid"
+			+ " and group_master.groupid=grmap.groupid";
+	
+}

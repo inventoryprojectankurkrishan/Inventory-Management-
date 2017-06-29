@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Welcome</title>
+</head>
+<body>
+	<h1>Welcome to Dashboard</h1>
+
+	Hello
+	
+		
+<%-- 						<s:property value="userid" /> --%>
+<%-- 						<s:property value="DashboardDTO.getsalutation" /> --%>
+<%-- 						<s:property value="DashboardDTO.firstname" /> --%>
+<%-- 						<s:property value="middlename" /> --%>
+<%-- 						<s:property value="#lastname" /> --%>
+<%-- 						<s:property value="#DashboardDTO.dateofbirth" /> --%>
+<%-- 						<s:property value="dashboardDTO.gender" /> --%>
+<%-- 						<s:property value="#dashboardDTO.phone" /> --%>
+<%-- 						<s:property value="emailid" /> --%>
+<%-- 						<s:property value="address" />		 --%>
+					
+<s:iterator value="dashboardDTO" var="obj">
+
+	<div class="container">
+    
+    <div class="row">
+    <s:iterator value="roleDTO" var="roleObj">
+			<s:set id="contextPath"  value="#request.get('javax.servlet.forward.context_path')" />
+        <div class="col-sm-3 col-md-3">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                        	<s:a href="#" class="btn btn-info btn-block" role="button">Dashboard</s:a>
+                        </h4>
+                    </div>
+                <s:iterator value="groupMap" var ="groupObj">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+							<s:a data-toggle="collapse" class="btn btn-info btn-block" data-parent="#accordion" href="#${key}" />
+                            </span><s:property value="key"></s:property></a>
+                        </h4>
+                    </div>
+                    <div id="${key}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                            <s:iterator value="value" var="rightList">
+                                <tr>
+                                    <td>
+                                        <s:a href="%{contextPath}%{url}">${rightList.name } </s:a>
+                                    </td>
+                                </tr>
+                            </s:iterator>
+                            </table>
+                        </div>
+                    </div>
+                  </s:iterator>
+                </div>
+            </div>
+       
+        </div>
+ </s:iterator>
+					
+					
+					
+					
+					
+					
+	
+</body>
+</html>

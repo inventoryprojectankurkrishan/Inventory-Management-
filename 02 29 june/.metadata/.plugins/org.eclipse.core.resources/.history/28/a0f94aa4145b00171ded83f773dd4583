@@ -1,0 +1,47 @@
+package dAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import dTO.DashboardDTO;
+
+public class LoginDAO {
+	public DashboardDTO doLoginDAO(String userid) throws SQLException
+	{
+		DashboardDTO dashboardDTO=null;
+		Connection con = null;
+		
+		PreparedStatement pstmt1 =null;
+		
+		ResultSet rs1=null;
+		
+		try{
+			
+		}
+		finally
+		{
+			if(rs1!=null)
+			{
+				rs1.close();
+			}
+			if(pstmt1!=null)
+			{
+				pstmt1.close();
+			}
+			
+			if(con!=null)
+			{
+				con.close();
+			}
+			
+			
+		}
+		
+		
+		
+		return dashboardDTO;
+	}
+	
+}

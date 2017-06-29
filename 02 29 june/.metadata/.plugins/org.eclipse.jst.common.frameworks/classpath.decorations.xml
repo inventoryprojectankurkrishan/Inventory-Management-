@@ -1,0 +1,7 @@
+<classpath>
+  <container id="Inventory System!org.eclipse.jst.j2ee.internal.web.container">
+    <entry id="E:/Krishan/Study/Brain Mentors/Java/Programs/Eclipse/Inventory/krishan/02/Inventory System/WebContent/WEB-INF/lib/xwork-core-2.3.31.jar">
+      <source-attachment-path>C:/Users/Dell/.m2/repository/org/apache/struts/xwork/xwork-core/2.3.31/xwork-core-2.3.31-sources.jar</source-attachment-path>
+    </entry>
+  </container>
+</classpath>

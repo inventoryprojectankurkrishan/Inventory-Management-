@@ -1,0 +1,127 @@
+package dAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+
+import dTO.DashboardDTO;
+import dTO.userDTO.NameDTO;
+import dTO.userDTO.RightDTO;
+import dTO.userDTO.RoleDTO;
+
+public class LoginDAO {
+	public DashboardDTO doLoginDAO(String userid) throws SQLException
+	{
+		DashboardDTO dashboardDTO=null;
+		Connection con = null;
+		
+		PreparedStatement pstmt1 =null;
+		
+		ResultSet rs1=null;
+		
+		
+		
+		LinkedHashMap<String, ArrayList<RightDTO>> groupMap = new LinkedHashMap<>();
+		ArrayList<RightDTO> rightList = new ArrayList<RightDTO>();
+		NameDTO nameDTO = null;
+		String tempGroupName="";
+		RoleDTO roleDTO;
+		
+		try
+		{
+			con = CommonDAO.getConnection();
+			
+			pstmt1=con.prepareStatement(CommonSQL.GET_USER_DETAILS_SQL);
+			pstmt1.setString(1, userid);
+			rs1=pstmt1.executeQuery();
+			
+			
+			while(rs1.next())
+			{
+				if(rs1.isFirst())
+					{	
+					
+						tempGroupName=rs1.getString("groupname");
+					
+						dashboardDTO=new DashboardDTO();
+					
+						dashboardDTO.setSalutation(rs1.getString("salutation"));
+						dashboardDTO.setFirstname(rs1.getString("first_name"));
+						dashboardDTO.setMiddlename(rs1.getString("middle_name"));
+						dashboardDTO.setLastname(rs1.getString("last_name"));
+						dashboardDTO.setDateofbirth(rs1.getString("date_of_birth"));
+						dashboardDTO.setGender(rs1.getString("gender"));
+						dashboardDTO.setUserid(rs1.getString("userid"));
+						dashboardDTO.setPassword(rs1.getString("password"));
+						dashboardDTO.setPhone(rs1.getString("phone"));
+						dashboardDTO.setEmailid(rs1.getString("email_id"));
+						dashboardDTO.setAddress(rs1.getString("address"));
+					
+						roleDTO= new RoleDTO();
+						roleDTO.setName(rs1.getString("rolename"));
+						roleDTO.setDescr(rs1.getString("roledescr"));
+					
+					}
+				
+				if(!(tempGroupName.equals(rs1.getString("groupname"))))
+					{
+						groupMap.put(tempGroupName, rightList);
+						rightList=new ArrayList <RightDTO>();
+						tempGroupName=rs1.getString("groupname");
+					}
+				RightDTO rightDTO = new RightDTO();
+				rightDTO.setName(rs1.getString("name"));
+				rightDTO.setDescr(rs1.getString("descr"));
+				rightDTO.setUrl(rs1.getString("screenname"));
+				rightList.add(rightDTO);
+				
+				
+				if(rs1.isLast())
+				{
+					groupMap.put(tempGroupName, rightList);
+				}
+			}//end of while
+			
+			if(dashboardDTO!=null)
+			{
+				if(roleDTO!=null)
+					{
+					dashboardDTO.setRoleDTO(roleDTO);
+						if(groupMap!=null && groupMap.size()>0)
+							{
+								roleDTO.setGroupMap(groupMap);
+								
+							}
+					}
+			}
+		System.out.println("DATA IS "+dashboardDTO);
+			
+			
+		} 
+		catch (ClassNotFoundException e) 
+			{
+				e.printStackTrace();
+				System.out.println("ClassNotFoundException generated in doLoginDAO in LoginDAO");
+			}
+		finally
+			{
+				if(rs1!=null)
+				{
+					rs1.close();
+				}
+				if(pstmt1!=null)
+				{
+					pstmt1.close();
+				}
+				if(con!=null)
+				{
+					con.close();
+				}	
+			}
+		return dashboardDTO;
+	}
+	
+}

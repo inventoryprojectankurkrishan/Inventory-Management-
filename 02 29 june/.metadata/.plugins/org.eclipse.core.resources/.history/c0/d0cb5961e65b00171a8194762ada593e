@@ -1,0 +1,63 @@
+package action;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+import dTO.DashboardDTO;
+import dTO.LoginDTO;
+import dTO.LoginResultDTO;
+import service.LoginService;
+
+public class LoginAC extends ActionSupport{
+	String userid;
+	String password;
+	DashboardDTO dashboardDTO;
+	
+	public String getUserid() {
+		return userid;
+	}
+	public void setUserid(String userid) {
+		this.userid = userid;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public DashboardDTO getDashboardDTO() {
+		return dashboardDTO;
+	}
+	public void setDashboardDTO(DashboardDTO dashboardDTO) {
+		this.dashboardDTO = dashboardDTO;
+	}
+	@Override
+	public String execute()
+	{	
+		String result=ERROR;
+		dashboardDTO=null;
+		LoginResultDTO loginResultDTO=null;
+		DashboardDTO dashboardDTO=null;
+		
+		LoginDTO loginDTO = new LoginDTO();
+		loginDTO.setUserid(userid);
+		loginDTO.setPassword(password);
+	
+		LoginService loginService=new LoginService();
+		
+		loginResultDTO=loginService.doLogin(loginDTO);
+		if(loginResultDTO!=null)
+		{	System.out.println("loginService.doLogin successful");
+			if(loginResultDTO.getResult())
+			{
+				dashboardDTO=loginResultDTO.getDashboardDTO();
+				System.out.println(dashboardDTO);
+				result=SUCCESS;
+			}
+		}
+		
+		return result;
+	}
+}

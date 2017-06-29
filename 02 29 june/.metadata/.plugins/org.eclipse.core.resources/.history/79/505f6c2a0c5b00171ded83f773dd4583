@@ -1,0 +1,31 @@
+package action;
+
+import dTO.DashboardDTO;
+
+public class LoginResultDTO {
+
+	String result;
+	DashboardDTO dashboardDTO;
+	
+	
+	public String getResult() {
+		return result;
+	}
+	public void setResult(String result) {
+		this.result = result;
+	}
+	public DashboardDTO getDashboardDTO() {
+		return dashboardDTO;
+	}
+	public void setDashboardDTO(DashboardDTO dashboardDTO) {
+		this.dashboardDTO = dashboardDTO;
+	}
+	
+	@Override
+	public String toString() {
+		return "LoginResultDTO [result=" + result + ", dashboardDTO=" + dashboardDTO + "]";
+	}
+	
+	
+	
+}

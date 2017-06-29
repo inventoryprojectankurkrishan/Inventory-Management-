@@ -1,0 +1,14 @@
+package dAO;
+
+import dTO.DashboardDTO;
+
+public class LoginDAO {
+	public DashboardDTO doLoginDAO(String userid)
+	{
+		DashboardDTO dashboardDTO=null;
+		
+		
+		return dashboardDTO;
+	}
+	
+}

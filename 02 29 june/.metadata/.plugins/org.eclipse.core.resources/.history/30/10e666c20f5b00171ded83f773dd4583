@@ -1,0 +1,23 @@
+package service;
+
+import dTO.DashboardDTO;
+import dTO.LoginDTO;
+import helper.LoginHelper;
+
+public class LoginService {
+		public boolean doLogin(LoginDTO loginDTO)
+		{
+			boolean result=false;
+			LoginHelper loginHelper = new LoginHelper();
+			if(loginHelper.checkUseridPassword(loginDTO))
+						{	
+							DashboardDTO dashboardDTO;
+							dashboardDTO=loginHelper.doLogin(loginDTO.getUserid());
+							if(dashboardDTO!=null)
+								{
+									result=loginHelper.setLastLogin(loginDTO.getUserid());
+								}	
+						}						
+			return result;
+		}
+}
